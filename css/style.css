@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -5,11 +7,11 @@
 }
 
 html {
-  font-family: sans-serif;
+  font-family: 'Indie Flower', cursive;
 }
 
 body {
-  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('/img/bg.png');
+  background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url('/img/bg.png');
   -webkit-background-size: cover;
   -moz-background-size:  cover;
   -o-background-size: cover;
@@ -17,32 +19,53 @@ body {
 }
 
 #ToDoList {
-  border-radius: 10px;
+  width: 40rem;
+  height: auto;
   margin: 3rem auto;
-  max-width: 40rem;
   padding: 1rem;
+  
   background-color: #fff;
+  border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 }
-
-label, input {
-  margin-bottom: 0.5rem;
-  display: block;
-  width: 100%;
-}
   
-label {
-  font-weight: bold;
-}
-  
-ul {
-  list-style: none;
-  margin: 1rem 0;
-  padding: 0;
+ol {
+  margin-top: 1rem;
 }
   
 li {
-  margin: 1rem 0;
-  padding: 1rem;
-  border: 1px solid #ccc;
+  padding: 1rem 0;
+  margin-left: 1.1rem;
+  font-weight: bold;
+}
+
+.list-container {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+}
+
+.ToDo-container {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+}
+
+.input-container {
+  width: 100%;
+}
+
+.btn-container {
+  margin-left: 1rem;
+  text-align: center;
+}
+
+.checkbox-container {
+  text-align: center;
+}
+.task-checkbox {
+  margin-left: 1rem;
+}
+
+.task-item, .form-control {
+  font-family: 'Inconsolata', monospace;
+  font-weight: 400 !important;
 }

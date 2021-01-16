@@ -7,7 +7,6 @@ Vue.createApp({
         },
         methods: {
             addTask() {
-
                 this.tasks.push(this.enteredValue);
                 this.enteredValue = '';
             }
