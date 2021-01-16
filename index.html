@@ -13,34 +13,66 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <!-- Custom Style Sheets -->
         <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/navbar.css">
+        <link rel="stylesheet" href="/css/footer.css">
         
     </head>
     <body>
-        <section id="ToDoList">
-            <!-- Input -->
-            <div class="ToDo-container">
-                <div class="input-container">
-                    <input type="text" id="goal" class="form-control" v-model="enteredValue" placeholder="Enter a new task..."/>
-                </div>
-                <div class="btn-container">
-                    <button class="btn btn-primary" v-on:click="addTask">Add</button>
-                </div>
+        <nav>
+            <div class="logo">
+                <img src="img/logo.png" alt="Logo Image">
             </div>
+            <div class="hamburger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
 
-            <!-- To Do List -->
-            <ol>
-                <li v-for="task in tasks">
-                    <div class="list-container">
-                        <div class="item-container">
-                            <span class="task-item">{{task}}</span>
-                        </div>
-                        <div class="checkbox-container">
-                            <input type="checkbox" class="task-checkbox">
-                        </div>
+                <li><button class="join-button" href="#">Join</button></li>
+                <li><button class="login-button" href="#">Login</button></li>
+            </ul>
+        </nav>
+
+        <section id="ToDoList">
+            <div class="ToDo-container">
+                <!-- Input -->
+                <div class="task-container">
+                    <div class="input-container">
+                        <input type="text" id="goal" class="form-control" v-model="enteredValue" placeholder="Enter a new task..."/>
                     </div>
-                </li>
-            </ol>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" v-on:click="addTask">Add</button>
+                    </div>
+                </div>
+
+                <!-- To Do List -->
+                <ol>
+                    <li v-for="task in tasks">
+                        <div class="list-container">
+                            <div class="item-container">
+                                <span class="task-item">{{task}}</span>
+                            </div>
+                            <div class="checkbox-container">
+                                <input type="checkbox" class="task-checkbox">
+                            </div>
+                        </div>
+                    </li>
+                </ol>
+            </div>
         </section>
+
+        <footer>
+            <section id="footer" class="py-3">
+              <div class="container text-center">
+                <a href="#" class="linkedin"></a>
+                <a href="#" class="twitter"></a>
+                <a href="#" class="skype"></a>
+                <h6 class="m-0 mt-4 text-center text-white text-capitalize">Created By: Christian Watson 2021</h6>
+              </div>
+            </section>
+        </footer>
 
         <!-- Vue.js CDN -->
         <script src="https://unpkg.com/vue@next"></script>
@@ -50,5 +82,6 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <!-- Custom JavaScript -->
         <script src="/js/app.js"></script>
+        <script src="/js/navbar.js"></script>
     </body>
 </html>
